@@ -6,7 +6,6 @@ import {
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
-
 import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
@@ -28,7 +27,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authroization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : '',
     },
   };
 });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -18,8 +19,8 @@ const Header = () => {
         <nav className="text-center">
           {Auth.loggedIn() ? (
             <>
-              <Link to='/profile'>Me</Link>
-              <a href='/' onClick={logout}>
+              <Link to="/profile">Me</Link>
+              <a href="/" onClick={logout}>
                 Logout
               </a>
             </>
